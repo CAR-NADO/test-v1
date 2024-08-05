@@ -1,0 +1,110 @@
+Ques-1: What is the difference between undefined and null in js ?
+Ans: In JavaScript, undefined and null are both used to represent absence of value, but they are used in slightly different contexts: 
+
+==> Undefined:
+     It indicates that a variable has been declared but has not been assigned a value.
+     It's also the default value of uninitialized variables.
+     Functions return undefined if nothing is returned explicitly.
+     When accessing an object property that doesn't exist, JavaScript returns undefined.
+
+==> Example:
+    let x; // x is declared but not assigned a value, so it's undefined
+    console.log(x); // Output: undefined
+
+    function foo() {}
+    console.log(foo()); // Output: undefined
+
+    let obj = {};
+    console.log(obj.nonExistentProperty); // Output: undefined
+
+==> Null:
+     It is explicitly assigned by a programmer to indicate that there is no value or that the value is explicitly empty.
+     It is often used as a placeholder to represent "no value" in situations where undefined is not suitable.
+
+==> Example:
+     let y = null; // y is explicitly assigned null
+     console.log(y); // Output: null
+
+Note: typeof undefined is undefined and null is object.
+
+********************************************************************************************************
+
+Ques-2: What does the && operator do in js ?
+Ans: In JavaScript, the && operator is the logical AND operator. It returns true if both operands are true; otherwise, it returns false.
+
+     Here's how it works:
+     If both operands are true, it returns true.
+     If either operand is false, it returns false.
+     If the first operand is false, it returns false without evaluating the second operand (short-circuiting).
+==> Example:
+     true && true;   // true
+     true && false;  // false
+     false && true;  // false
+     false && false; // false
+
+********************************************************************************************************
+
+Ques-3: What does the || operator do in js ?
+Ans: In JavaScript, the || operator is the logical OR operator. It returns true if at least one of the operands is true, otherwise it returns false.
+
+     Here's how it works:
+     If the first operand is true, it returns true without evaluating the second operand (short-circuiting).
+     If the first operand is false, it evaluates the second operand and returns its value.
+     If both operands are false, it returns false.
+
+==> Example:
+     true || true;   // true
+     true || false;  // true
+     false || true;  // true
+     false || false; // false
+
+   The || operator is often used for default values or fallback values in JavaScript:
+   let x = undefined;
+   let y = x || "default value";
+   console.log(y); // Output: "default value"
+
+   let a = 0;
+   let b = a || 5;
+   console.log(b); // Output: 5
+  since a is 0 (falsy), the expression a || 5 evaluates to 5, which is assigned to b.
+
+********************************************************************************************************
+
+Ques-4: Is using the + or unary plus operator the fastest way in converting a string to a number in js ?
+Ans: In JavaScript, there are multiple ways to convert a string to a number,
+     and the performance of each method may vary depending on the context and the size of the string.
+
+==> Example:
+    let str = "123";
+    let num = +str; // Convert string to number using unary plus operator
+
+    Another common method is using to convert string to number.
+     let str = "123";
+     let num = parseInt(str); // Convert string to number using parseInt()
+     let str = "123";
+     let num = Number(str); // Convert string to number using Number() constructor
+     let str = "123.45";
+     let num = parseFloat(str); // Convert string to number using parseFloat()
+
+********************************************************************************************************
+
+Ques-4: Is using the + or unary plus operator the fastest way in converting a string to a number in js ?
+Ans: In JavaScript, there are multiple ways to convert a string to a number,
+     and the performance of each method may vary depending on the context and the size of the string.
+
+==> Example:
+    let str = "123";
+    let num = +str; // Convert string to number using unary plus operator
+
+    Another common method is using to convert string to number.
+     let str = "123";
+     let num = parseInt(str); // Convert string to number using parseInt()
+     let str = "123";
+     let num = Number(str); // Convert string to number using Number() constructor
+     let str = "123.45";
+     let num = parseFloat(str); // Convert string to number using parseFloat()
+
+
+
+
+
